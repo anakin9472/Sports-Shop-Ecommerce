@@ -1,5 +1,18 @@
 import 'package:flutter/material.dart';
 
+class CardItem {
+  String cardImage = '';
+  String cardTitle = '';
+  String cardSubtitle = '';
+
+  CardItem(
+      String inputCardImage, String inputCardTitle, String inputCardSubtitle) {
+    cardImage = inputCardImage;
+    cardTitle = inputCardTitle;
+    cardSubtitle = inputCardSubtitle;
+  }
+}
+
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({Key? key}) : super(key: key);
 
@@ -8,6 +21,14 @@ class HomePageWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<HomePageWidget> {
+  List<CardItem> productItems = [
+    CardItem("assets/images/adidas-bag.jpeg", "Addidas Bag", "\$100"),
+    CardItem("assets/images/wilson-tennis.jpeg", "Wilson Tennis", "\$300"),
+    CardItem("assets/images/wimbledon-shoes.jpeg", "Wimbledon Shoes", "\$200"),
+    CardItem(
+        "assets/images/stan-smith-shoes.jpeg", "Stan Smith Shoes", "\$100"),
+  ];
+
   @override
   Widget build(BuildContext context) {
     //This size provides us total height and width of our screen
@@ -91,25 +112,30 @@ class _MyWidgetState extends State<HomePageWidget> {
                 separatorBuilder: (BuildContext context, int index) => SizedBox(
                   width: 12,
                 ),
-                itemBuilder: (BuildContext context, int index) => buildCard(),
+                itemBuilder: (BuildContext context, int index) =>
+                    buildCard(productItems[index]),
               ),
             )
           ]),
     );
   }
 
-  Widget buildCard() => Container(
+  Widget buildCard(CardItem cardItem) => Container(
       width: 150,
       height: 150,
       color: Colors.white,
       child: Column(
         children: [
-          Image.asset(
-            "assets/images/wimbledon-shoes.jpeg",
-            fit: BoxFit.cover,
-          ),
+          Expanded(
+              child: AspectRatio(
+            aspectRatio: 4 / 3,
+            child: Image.asset(
+              cardItem.cardImage,
+              fit: BoxFit.cover,
+            ),
+          )),
           Text(
-            "Product Name",
+            cardItem.cardTitle,
             style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'Lato-Black',
@@ -117,7 +143,7 @@ class _MyWidgetState extends State<HomePageWidget> {
                 fontSize: 12),
           ),
           Text(
-            "Price",
+            cardItem.cardSubtitle,
             style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'Lato-Regular',

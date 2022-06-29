@@ -25,13 +25,13 @@ class User {
 // void main() => runApp(DemoApp());
 
 void main() {
-  var user = User('user@gmail.com', 'thach9472');
-  var user2 = User.fromUser(
-      inputUsername: 'thach9472',
-      inputEmail: 'user@gmail.com',
-      inputFirstname: 'thach');
-  print(user.email);
-  print(user2.username);
+  // var user = User('user@gmail.com', 'thach9472');
+  // var user2 = User.fromUser(
+  //     inputUsername: 'thach9472',
+  //     inputEmail: 'user@gmail.com',
+  //     inputFirstname: 'thach');
+  // print(user.email);
+  // print(user2.username);
 
   runApp(DemoApp());
 }
