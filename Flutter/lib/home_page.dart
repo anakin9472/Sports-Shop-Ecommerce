@@ -37,7 +37,7 @@ class _MyWidgetState extends State<HomePageWidget> {
               //Apply padding by Left, Top, Right, Bottom
               padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
               child: Text(
-                'WELCOME TO OUR SPORTS STORE',
+                'WELCOME TO OUR SPORTS STORE VN',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -87,21 +87,36 @@ class _MyWidgetState extends State<HomePageWidget> {
                   ),
                 )),
 
-            Row(
-              children: [
-                buildCard(),
-                SizedBox(width: 12),
-                buildCard(),
-                SizedBox(
-                  width: 12,
-                ),
-                buildCard(),
-                SizedBox(width: 12),
-              ],
-            ),
+            //Using a standard ListView widget to display items
+            Container(
+              height: 140,
+              child: ListView(
+                //This line of code will override the default vertical direction and change it to horizontal direction
+                scrollDirection: Axis.horizontal,
+                //Creating a list of card items and wrap them with size boxes to direct them with a specific size
+                children: [
+                  buildCard(),
+                  SizedBox(width: 12),
+                  buildCard(),
+                  SizedBox(width: 12),
+                  buildCard(),
+                  SizedBox(width: 12),
+                  buildCard(),
+                  SizedBox(width: 12)
+                ],
+              ),
+            )
           ]),
     );
   }
 
-  Widget buildCard() => Container(width: 150, height: 150, color: Colors.blue);
+  Widget buildCard() => Container(
+        width: 150,
+        height: 150,
+        color: Colors.blue,
+        child: Image.asset(
+          "assets/images/wimbledon-shoes.jpeg",
+          fit: BoxFit.cover,
+        ),
+      );
 }
