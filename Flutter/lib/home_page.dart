@@ -7,14 +7,6 @@ class HomePageWidget extends StatefulWidget {
   State<HomePageWidget> createState() => _MyWidgetState();
 }
 
-class _HomePageState extends State<HomePageWidget> {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-}
-
 class _MyWidgetState extends State<HomePageWidget> {
   @override
   Widget build(BuildContext context) {
