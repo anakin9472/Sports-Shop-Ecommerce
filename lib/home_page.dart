@@ -33,27 +33,36 @@ class _MyWidgetState extends State<HomePageWidget> {
               //=> Use a list of widgets.
               children: <Widget>[
             //Use the Padding() widget to apply padding/ margin
-            Container(
-              height: 110,
-              child: Image.asset(
-                "assets/images/primax_sport_logo.jpeg",
-              ),
-            ),
-
             Padding(
               //Apply padding by Left, Top, Right, Bottom
-              padding: EdgeInsets.fromLTRB(20, 0, 0, 20),
+              padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
               child: Text(
-                'FOR YOUR SPORT PASSION',
+                'WELCOME TO OUR SPORTS STORE',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 25,
+                    fontSize: 32,
                     fontFamily: 'Lato-Black'),
               ),
             ),
+
+            // Text(
+            //   'WELCOME TO OUR SPORTS STORE',
+            //   textAlign: TextAlign.center,
+            //   style: TextStyle(
+            //       fontWeight: FontWeight.bold,
+            //       fontSize: 32,
+            //       fontFamily: 'Lato-Black'),
+            // ),
+
+            // Image.asset(
+            //   urlImage,
+            //   width: 350,
+            //   height: 350,
+            //   fit: BoxFit.cover,
+            // ),
             CircleAvatar(
-              radius: 120,
+              radius: 140,
               child: ClipOval(
                 child: Image.asset(
                   urlImage,
@@ -65,7 +74,7 @@ class _MyWidgetState extends State<HomePageWidget> {
             ),
 
             Padding(
-                padding: EdgeInsets.fromLTRB(30, 10, 0, 20),
+                padding: EdgeInsets.fromLTRB(30, 20, 20, 20),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
@@ -78,20 +87,23 @@ class _MyWidgetState extends State<HomePageWidget> {
                   ),
                 )),
 
-            //Using a seperated ListView widget to display items for higher performance than standard ListView
+            //Using a standard ListView widget to display items
             Container(
-              height: 150,
-              child: ListView.separated(
+              height: 140,
+              child: ListView(
                 //This line of code will override the default vertical direction and change it to horizontal direction
                 scrollDirection: Axis.horizontal,
                 //Creating a list of card items and wrap them with size boxes to direct them with a specific size
-                //The seperatorBuilder and itemBuilder properties of the ListView.seperated constructor will render the
-                // visible children and seperate them
-                itemCount: 4,
-                separatorBuilder: (BuildContext context, int index) => SizedBox(
-                  width: 12,
-                ),
-                itemBuilder: (BuildContext context, int index) => buildCard(),
+                children: [
+                  buildCard(),
+                  SizedBox(width: 12),
+                  buildCard(),
+                  SizedBox(width: 12),
+                  buildCard(),
+                  SizedBox(width: 12),
+                  buildCard(),
+                  SizedBox(width: 12)
+                ],
               ),
             )
           ]),
@@ -99,31 +111,12 @@ class _MyWidgetState extends State<HomePageWidget> {
   }
 
   Widget buildCard() => Container(
-      width: 150,
-      height: 150,
-      color: Colors.white,
-      child: Column(
-        children: [
-          Image.asset(
-            "assets/images/wimbledon-shoes.jpeg",
-            fit: BoxFit.cover,
-          ),
-          Text(
-            "Product Name",
-            style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'Lato-Black',
-                fontWeight: FontWeight.bold,
-                fontSize: 12),
-          ),
-          Text(
-            "Price",
-            style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'Lato-Regular',
-                fontWeight: FontWeight.normal,
-                fontSize: 12),
-          ),
-        ],
-      ));
+        width: 150,
+        height: 150,
+        color: Colors.blue,
+        child: Image.asset(
+          "assets/images/wimbledon-shoes.jpeg",
+          fit: BoxFit.cover,
+        ),
+      );
 }

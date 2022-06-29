@@ -82,6 +82,10 @@ flutter:
     - family: Lato-Black
       fonts:
         - asset: assets/fonts/Lato-Black.ttf
+    - family: Lato-Light
+      fonts:
+        - asset: assets/fonts/Lato-Regular.ttf
+
 
         
         # - asset: fonts/Schyler-Italic.ttf
