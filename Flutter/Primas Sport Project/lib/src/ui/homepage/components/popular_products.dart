@@ -1,9 +1,8 @@
 part of lib_hmpage;
 
 class PopularProducts extends StatelessWidget {
-  const PopularProducts({
-    Key? key,
-  }) : super(key: key);
+  final List<Product> products;
+  const PopularProducts({Key? key, required this.products}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

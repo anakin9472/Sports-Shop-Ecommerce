@@ -1,7 +1,29 @@
 part of lib_hmpage;
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomePageWidget extends StatefulWidget {
+  const HomePageWidget({Key? key}) : super(key: key);
+  @override
+  State<HomePageWidget> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<HomePageWidget> {
+  List<Product> products = [];
+  var isLoaded = false;
+  @override
+  void initState() {
+    super.initState();
+    //fetch data from API
+    getData();
+  }
+
+  getData() async {
+    products = (await ProductsService().getAllProducts()) ?? [];
+    if (products != null) {
+      setState(() {
+        isLoaded = true;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,28 +63,37 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.all(defaultPadding),
 
         /// A widget that displays its children in a vertical array.
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Primas Sport",
-              style: Theme.of(context)
-                  .textTheme
-                  .headline4!
-                  .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
-            ),
-            const Text(
-              "The best Fitness Shop for you",
-              style: TextStyle(fontSize: 18),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: defaultPadding),
-              child: SearchForm(),
-            ),
-            const Categories(),
-            const NewArrivalProducts(),
-            const PopularProducts(),
-          ],
+        child: Visibility(
+          visible: isLoaded,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Primas Sport",
+                style: Theme.of(context)
+                    .textTheme
+                    .headline4!
+                    .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
+              ),
+              const Text(
+                "The best Fitness Shop for you",
+                style: TextStyle(fontSize: 18),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: defaultPadding),
+                child: SearchForm(),
+              ),
+              const Categories(),
+              // const NewArrivalProducts(products: products,),
+              // const PopularProducts(products: products,),
+              NewArrivalProducts(
+                products: products,
+              ),
+              PopularProducts(
+                products: products,
+              ),
+            ],
+          ),
         ),
       ),
     );

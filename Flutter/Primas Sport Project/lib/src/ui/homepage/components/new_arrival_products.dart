@@ -1,9 +1,9 @@
 part of lib_hmpage;
 
 class NewArrivalProducts extends StatelessWidget {
-  const NewArrivalProducts({
-    Key? key,
-  }) : super(key: key);
+  final List<Product> products;
+  const NewArrivalProducts({Key? key, required this.products})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

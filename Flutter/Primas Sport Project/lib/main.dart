@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import '../src/ui/homepage/lib_hmpage.dart';
 
 import '../src/data/ultis/constants.dart';
+import 'package:http/http.dart' as http;
+import 'dart:io';
 
 void main() {
+  HttpOverrides.global = MyHttpOverrides();
   runApp(const Main());
 }
 
@@ -27,7 +30,16 @@ class Main extends StatelessWidget {
           bodyText2: TextStyle(color: Colors.black54),
         ),
       ),
-      home: const HomeScreen(),
+      home: const HomePageWidget(),
     );
+  }
+}
+
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
   }
 }

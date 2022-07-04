@@ -10021,11 +10021,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Thuc tap Flutter va ASP.NET\\Sports-Shop-Ecommerce\\Sports-Shop-Ecommerce\\ASP .NET\\Primas Sport Project\\ecommerceDemo\\ecommerceDemo.csproj",
+      "projectUniqueName": "C:\\Users\\Admins\\Desktop\\ecommerceDemo\\ecommerceDemo\\ecommerceDemo.csproj",
       "projectName": "ecommerceDemo",
-      "projectPath": "E:\\Thuc tap Flutter va ASP.NET\\Sports-Shop-Ecommerce\\Sports-Shop-Ecommerce\\ASP .NET\\Primas Sport Project\\ecommerceDemo\\ecommerceDemo.csproj",
+      "projectPath": "C:\\Users\\Admins\\Desktop\\ecommerceDemo\\ecommerceDemo\\ecommerceDemo.csproj",
       "packagesPath": "C:\\Users\\Admins\\.nuget\\packages\\",
-      "outputPath": "E:\\Thuc tap Flutter va ASP.NET\\Sports-Shop-Ecommerce\\Sports-Shop-Ecommerce\\ASP .NET\\Primas Sport Project\\ecommerceDemo\\obj\\",
+      "outputPath": "C:\\Users\\Admins\\Desktop\\ecommerceDemo\\ecommerceDemo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admins\\AppData\\Roaming\\NuGet\\NuGet.Config",
