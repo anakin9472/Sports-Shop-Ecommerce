@@ -26,21 +26,21 @@ namespace Ecommerce.Data
 
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.ToTable("products");
+                entity.ToTable("product");
 
                 entity.Property(e => e.ProductId).HasColumnName("productId");
 
-                entity.Property(e => e.ProductImage)
+                entity.Property(e => e.Image)
                     .HasMaxLength(200)
-                    .HasColumnName("productImage");
+                    .HasColumnName("image");
 
-                entity.Property(e => e.ProductName)
+                entity.Property(e => e.Title)
                     .HasMaxLength(100)
-                    .HasColumnName("productName");
+                    .HasColumnName("title");
 
-                entity.Property(e => e.ProductPrice)
+                entity.Property(e => e.Price)
                     .HasMaxLength(100)
-                    .HasColumnName("productPrice");
+                    .HasColumnName("price");
             });
 
             OnModelCreatingPartial(modelBuilder);

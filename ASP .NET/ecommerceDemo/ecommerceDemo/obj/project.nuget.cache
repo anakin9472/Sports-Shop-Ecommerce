@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "prPoNCOiFvcXbG5yT35b7LtxwrAbrZMS8Ula89L7i4fHrYOmcvHtiZTZ+Hd0A6abKgeUc5Ujv11j0TDxcsbltQ==",
+  "dgSpecHash": "69nAhYews0OjgfpEybuPXx3muz24wcmFN80APg29SjXS5uBwi73zSK5OpR5PBx7Ddrn+bWCs3GIzwIgv/1FhzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admins\\Desktop\\ecommerceDemo\\ecommerceDemo\\ecommerceDemo.csproj",
+  "projectFilePath": "E:\\Thuc tap Flutter va ASP.NET\\Sports-Shop-Ecommerce\\Sports-Shop-Ecommerce\\ASP .NET\\ecommerceDemo\\ecommerceDemo\\ecommerceDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admins\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Admins\\.nuget\\packages\\entityframeworkcore.exceptions.common\\6.0.3\\entityframeworkcore.exceptions.common.6.0.3.nupkg.sha512",
