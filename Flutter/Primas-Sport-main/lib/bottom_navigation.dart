@@ -19,7 +19,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int index = 0;
 
   List<Widget> screens = const [
-    HomePageWidget(),
+    HomeScreen(),
     ExploreScreen(),
     OrdersScreen(),
     ProfileScreen(),

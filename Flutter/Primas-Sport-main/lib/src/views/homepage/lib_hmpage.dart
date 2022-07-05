@@ -1,10 +1,15 @@
 library lib_hmpage;
 
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:line_icons/line_icons.dart';
+
+import '../../../bottom_navigation.dart';
+import '../../data/services/productsServices.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../data/models/models.dart';
-import '../../data/services/productsServices.dart';
 import '../../data/ultis/ultis.dart';
 import '../details/lib_detail.dart';
 
@@ -16,3 +21,5 @@ part 'components/popular_products.dart';
 part 'components/product_card.dart';
 part 'components/search_form.dart';
 part 'components/section_title.dart';
+part 'components/special_offers.dart';
+part 'components/discount_banner.dart';

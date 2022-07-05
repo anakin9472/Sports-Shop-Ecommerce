@@ -93,13 +93,13 @@ flutter:
   fonts:
     - family: Lato-Bold
       fonts:
-        - asset: assets/fonts/Lato-Bold.ttf
+        - asset: assets/fonts/lato/Lato-Bold.ttf
     - family: Lato-Black
       fonts:
-        - asset: assets/fonts/Lato-Black.ttf
+        - asset: assets/fonts/lato/Lato-Black.ttf
     - family: Lato-Light
       fonts:
-        - asset: assets/fonts/Lato-Regular.ttf
+        - asset: assets/fonts/lato/Lato-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

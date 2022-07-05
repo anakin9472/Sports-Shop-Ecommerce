@@ -7,5 +7,6 @@ import 'package:page_transition/page_transition.dart';
 
 part 'constants.dart';
 part 'onboarding.dart';
-part 'theme.dart';
 part 'size_config.dart';
+part 'theme.dart';
+part 'enums.dart';

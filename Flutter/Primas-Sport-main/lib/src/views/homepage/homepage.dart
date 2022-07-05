@@ -1,12 +1,13 @@
 part of lib_hmpage;
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key? key}) : super(key: key);
+class HomeScreen extends ConsumerStatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
-  State<HomePageWidget> createState() => _HomePageWidgetState();
+  ConsumerState<ConsumerStatefulWidget> createState() => _HomePageWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
+class _HomePageWidgetState extends ConsumerState<HomeScreen> {
   List<Product> products = [];
   var isLoaded = false;
   @override
@@ -25,8 +26,54 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     return Scaffold(
-      appBar: appBar2,
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => navigator(context, const BottomNavigation()),
+          icon: SvgPicture.asset(
+            "assets/icons/logo.svg",
+            width: 50,
+            height: 50,
+          ),
+        ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Primas',
+                    style: TextStyle(
+                        color: AppColors.kSecondaryColor,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w800),
+                  ),
+                  TextSpan(
+                    text: ' Sport',
+                    style: TextStyle(
+                        letterSpacing: 1.2,
+                        fontSize: 28,
+                        fontWeight: FontWeight.w800),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(
+              LineIcons.bell,
+              size: 30,
+              color: AppColors.kSecondaryColor,
+            ),
+            onPressed: () {},
+          ),
+        ],
+      ),
 
       /// A widget that is used to scroll the content of the body.
       body: SingleChildScrollView(
@@ -35,37 +82,23 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         padding: const EdgeInsets.all(Margin.defaultPadding),
 
         /// A widget that displays its children in a vertical array.
-        child: Visibility(
-          visible: isLoaded,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Primas Sport",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4!
-                    .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
-              ),
-              const Text(
-                "The best Fitness Shop for you",
-                style: TextStyle(fontSize: 18),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: Margin.defaultPadding),
-                child: SearchForm(),
-              ),
-              const Categories(),
-              // const NewArrivalProducts(products: products,),
-              // const PopularProducts(products: products,),
-              NewArrivalProducts(
-                products: products,
-              ),
-              PopularProducts(
-                products: products,
-              ),
-            ],
-          ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const DiscountBanner(),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: Margin.defaultPadding),
+              child: SearchForm(),
+            ),
+            SizedBox(height: getProportionateScreenHeight(12)),
+            const Categories(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            const SpecialOffers(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            NewArrivalProducts(products: products),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            PopularProducts(products: products),
+          ],
         ),
       ),
     );
