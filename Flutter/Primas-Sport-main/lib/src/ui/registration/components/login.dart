@@ -48,7 +48,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
               SizedBox(height: 45.h),
               const FormBuilder(
                 label: 'ACCOUNT',
-                hintText: 'Tên tài khoản/email',
+                hintText: 'Username or Email address',
               ),
               SizedBox(height: 20.h),
               const FormBuilder(
@@ -78,11 +78,12 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                                 AppColors.kPrimaryColor),
                           ),
                         ),
+
                         /// A padding widget.
                         const Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text(
-                            'Nhớ tài khoản',
+                            'Remember Password',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                             ),
@@ -98,12 +99,12 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         TextSpan(
                           children: [
                             const TextSpan(
-                                text: 'Quên',
+                                text: 'Forget',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                 )),
                             TextSpan(
-                                text: ' mật khẩu?',
+                                text: ' password?',
                                 style: TextStyle(
                                   color: Theme.of(context).primaryColor,
                                   fontWeight: FontWeight.w600,
@@ -119,7 +120,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
               SizedBox(height: 70.h),
               Center(
                 child: PrimaryButton(
-                  label: 'ĐĂNG NHẬP',
+                  label: 'SIGN IN',
                   onTap: () => Navigator.push(
                     context,
                     PageTransition(
@@ -148,7 +149,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     padding:
                         EdgeInsets.symmetric(vertical: 13.h, horizontal: 45.w),
                     child: Text(
-                      'Đăng Nhập bằng Google',
+                      'Sign in with Google',
                       style: TextStyle(
                         fontSize: 19.sp,
                         letterSpacing: 1.1,
@@ -167,12 +168,12 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     TextSpan(
                       children: [
                         const TextSpan(
-                            text: 'Không có tài khoản ?',
+                            text: 'Do not have an account ?',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                             )),
                         TextSpan(
-                            text: ' Đăng ký',
+                            text: ' Register now',
                             style: TextStyle(
                               color: Theme.of(context).primaryColor,
                               fontWeight: FontWeight.w600,

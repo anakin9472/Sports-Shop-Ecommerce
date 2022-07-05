@@ -14,3 +14,27 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = E:\Thuc tap Flutter va ASP.NET\Sports-Shop-Ecommerce\Sports-Shop-Ecommerce\ASP .NET\ecommerceDemo\ecommerceDemo
 build_property._RazorSourceGeneratorDebug = 
+
+[E:/Thuc tap Flutter va ASP.NET/Sports-Shop-Ecommerce/Sports-Shop-Ecommerce/ASP .NET/ecommerceDemo/ecommerceDemo/Views/Accounts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Thuc tap Flutter va ASP.NET/Sports-Shop-Ecommerce/Sports-Shop-Ecommerce/ASP .NET/ecommerceDemo/ecommerceDemo/Views/Accounts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Thuc tap Flutter va ASP.NET/Sports-Shop-Ecommerce/Sports-Shop-Ecommerce/ASP .NET/ecommerceDemo/ecommerceDemo/Views/Accounts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Thuc tap Flutter va ASP.NET/Sports-Shop-Ecommerce/Sports-Shop-Ecommerce/ASP .NET/ecommerceDemo/ecommerceDemo/Views/Accounts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Thuc tap Flutter va ASP.NET/Sports-Shop-Ecommerce/Sports-Shop-Ecommerce/ASP .NET/ecommerceDemo/ecommerceDemo/Views/Accounts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Thuc tap Flutter va ASP.NET/Sports-Shop-Ecommerce/Sports-Shop-Ecommerce/ASP .NET/ecommerceDemo/ecommerceDemo/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

@@ -548,3 +548,5 @@ E:\Thuc tap Flutter va ASP.NET\Sports-Shop-Ecommerce\Sports-Shop-Ecommerce\ASP .
 E:\Thuc tap Flutter va ASP.NET\Sports-Shop-Ecommerce\Sports-Shop-Ecommerce\ASP .NET\ecommerceDemo\ecommerceDemo\obj\Debug\net6.0\ecommerceDemo.pdb
 E:\Thuc tap Flutter va ASP.NET\Sports-Shop-Ecommerce\Sports-Shop-Ecommerce\ASP .NET\ecommerceDemo\ecommerceDemo\obj\Debug\net6.0\ecommerceDemo.genruntimeconfig.cache
 E:\Thuc tap Flutter va ASP.NET\Sports-Shop-Ecommerce\Sports-Shop-Ecommerce\ASP .NET\ecommerceDemo\ecommerceDemo\obj\Debug\net6.0\ref\ecommerceDemo.dll
+E:\Thuc tap Flutter va ASP.NET\Sports-Shop-Ecommerce\Sports-Shop-Ecommerce\ASP .NET\ecommerceDemo\ecommerceDemo\obj\Debug\net6.0\ecommerceDemo.RazorAssemblyInfo.cache
+E:\Thuc tap Flutter va ASP.NET\Sports-Shop-Ecommerce\Sports-Shop-Ecommerce\ASP .NET\ecommerceDemo\ecommerceDemo\obj\Debug\net6.0\ecommerceDemo.RazorAssemblyInfo.cs
