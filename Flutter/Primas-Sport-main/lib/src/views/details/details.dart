@@ -25,7 +25,7 @@ class DetailsScreen extends ConsumerWidget {
       ),
       body: Column(
         children: [
-          Image.asset(
+          Image.network(
             product.image,
             height: MediaQuery.of(context).size.height * 0.4,
             fit: BoxFit.cover,

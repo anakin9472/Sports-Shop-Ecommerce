@@ -72,6 +72,10 @@ namespace ecommerceDemo.Controllers
             return CreatedAtAction("GetAccount", new { id = account.AccountId }, account);
         }
 
+        [HttpPost("authenticate")]
+
+
+
         /*        // GET: Accounts/Details/5
                 public async Task<IActionResult> Details(int? id)
                 {
@@ -181,24 +185,24 @@ namespace ecommerceDemo.Controllers
                     return View(account);
                 }*/
 
-/*        // POST: Accounts/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Account == null)
-            {
-                return Problem("Entity set 'EcommerceContext.Account'  is null.");
-            }
-            var account = await _context.Account.FindAsync(id);
-            if (account != null)
-            {
-                _context.Account.Remove(account);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }*/
+        /*        // POST: Accounts/Delete/5
+                [HttpPost, ActionName("Delete")]
+                [ValidateAntiForgeryToken]
+                public async Task<IActionResult> DeleteConfirmed(int id)
+                {
+                    if (_context.Account == null)
+                    {
+                        return Problem("Entity set 'EcommerceContext.Account'  is null.");
+                    }
+                    var account = await _context.Account.FindAsync(id);
+                    if (account != null)
+                    {
+                        _context.Account.Remove(account);
+                    }
+
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }*/
 
         private bool AccountExists(int id)
         {

@@ -1,3 +1,4 @@
+//This line of code will automatically import all the files which are contained in the file "models"
 part of models;
 
 List<Product> productFromJson(String str) =>
